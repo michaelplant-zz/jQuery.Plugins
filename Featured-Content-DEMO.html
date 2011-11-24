@@ -7,23 +7,20 @@
 <script src="assets/js/jquery.featured-content.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(function() {
-	$('.featured-content').featuredContent();
+	$('.featured-content').featuredContent({
+		repeaterTag		: 'a',
+		startIndex		: 2
+	});
 });
 </script>
-<style>
-body {font-family:Arial, Helvetica, sans-serif; font-size:12px;}
-
-.fadein { position:relative; height:332px; width:500px; }
-.fadein img { position:absolute; left:0; top:0; }
-</style>
 </head>
 
 <body>
 <h1>Simplest jQuery Slideshow</h1>
 <div class="featured-content">
-	<img src="http://farm3.static.flickr.com/2610/4148988872_990b6da667.jpg" />
-	<img src="http://farm3.static.flickr.com/2597/4121218611_040cd7b3f2.jpg" />
-	<img src="http://farm3.static.flickr.com/2531/4121218751_ac8bf49d5d.jpg" />
+	<a href="http://farm3.static.flickr.com/2610/4148988872_990b6da667.jpg"><img src="http://farm3.static.flickr.com/2610/4148988872_990b6da667.jpg" /></a>
+	<a href="http://farm3.static.flickr.com/2597/4121218611_040cd7b3f2.jpg"><img src="http://farm3.static.flickr.com/2597/4121218611_040cd7b3f2.jpg" /></a>
+	<a href="http://farm3.static.flickr.com/2531/4121218751_ac8bf49d5d.jpg"><img src="http://farm3.static.flickr.com/2531/4121218751_ac8bf49d5d.jpg" /></a>
 </div>
 </body>
 </html>
