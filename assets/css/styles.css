@@ -208,7 +208,7 @@ ul.menu li a:hover {
 body {
   width: 960px;
   margin: 0 auto;
-  background: #f4f4f4 url(../images/bg-body-960.png) repeat-y center 0;
+  background: #F4F4F4 url(../images/bg-body-960.png) repeat-y   center 0;
 }
 h1 {
   font-size: 175%;
