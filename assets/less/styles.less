@@ -3,17 +3,13 @@
 @import "helpers.less";
 
 @black : '#333';
-@imgpath : '../images/';
-.bg(@img: "", @color: " ", @repeat: "no-repeat", @x: "0", @y: "0", @att: " ") {
-    background: e(%("%s", @color)) e(%("url(%s%s)", @imgpath, @img)) e(%("%s", @repeat)) e(%("%s", @att)) e(%("%s", @x)) e(%("%s", @y));
-}
+@images : '../images/';
 
 /* Specifc to Site */
 body {
 	width:960px;
 	margin:0 auto;
-	color:@black;
-	.bg('bg-body-960.png','#F4F4F4','repeat-y', 'center', 0)
+	background:#F4F4F4 url("@{images}bg-body-960.png") repeat-y center 0;
 }
 	h1 {
 		font-size:175%;
@@ -28,4 +24,3 @@ body {
 		float:right;
 		margin-right:30px;
 	}
-	
