@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>jQuery Featured Content</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+<script src="assets/js/jquery.featured-content.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+	
+	animation = $.getUrlVar('animation');
+	
+	if ( animation == 'slide' ) {
+		$('#animations > a').text('crossfade').attr('href','?animation=crossfade');
+	}
+	
+	var fc = $('#featured-content').featuredContent({
+		repeaterTag		: 'a',
+		animation		: animation
+	});
+	
+});
+$.extend({
+  getUrlVars: function(){
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+      hash = hashes[i].split('=');
+      vars.push(hash[0]);
+      vars[hash[0]] = hash[1];
+    }
+    return vars;
+  },
+  getUrlVar: function(name){
+    return $.getUrlVars()[name];
+  }
+});
+</script>
+<style type="text/css">
+/* Standardize */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, a img, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-collapse:collapse;
+	border-spacing:0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+}
+/* Miscellaneous conveniences: */
+h1, h2, h3, h4, h5, h6, p, pre, 
+blockquote, ul, ol, dl, address { 
+	margin:.5em 0; 
+	padding: 0; 
+}
+p, pre, blockquote, ul, ol, dl, address {
+	line-height:150%;
+}
+li, dd, blockquote { 
+	margin-left: 1em; 
+}    
+form label {
+	cursor: pointer;
+}
+fieldset {
+	border: none;
+}
+input, select, textarea {
+	font-size: 100%;
+	font-family: inherit;
+}
+em {
+	font-style:italic;
+}
+h1, h2, h3, h4, h5, h6, strong {
+	font-weight:bold;
+}
+/* Specifc to Site */
+body {
+	width:960px;
+	margin:0 auto;
+	background:#F4F4F4 url(assets/images/bg-body-960.png) repeat-y center 0;
+}
+	h1 {
+		font-size:175%;
+		font-weight:normal;
+		font-family:Verdana, Geneva, sans-serif;
+		margin:30px 20px 30px;
+	}
+	p {
+		margin:1em 30px;
+	}
+	#animations {
+		float:right;
+		margin-right:30px;
+	}
+</style>
+</head>
+
+<body>
+<div id="animations">
+	<a href="?animation=slide">slide</a>
+</div>
+<h1>Featured Content Slider</h1>
+<div id="featured-content">
+	<a href="#"><img src="assets/images/feature-image-top.jpg" width="960" height="340" alt="Featured Content Image"/></a>
+	<a href="#"><img src="assets/images/feature-image-bottom.jpg" width="960" height="340" alt="Featured Content Image"/></a>
+	<a href="#"><img src="assets/images/feature-image-tower.jpg" width="960" height="340" alt="Featured Content Image"/></a>
+</div>
+<p>Tincidunt cursus amet aliquam amet odio duis adipiscing scelerisque tincidunt! Ut tincidunt quis porttitor habitasse! Turpis auctor, est egestas adipiscing nunc platea nunc mauris, velit ultrices, lundium a ultricies dolor. Purus massa? Sagittis. Magnis platea pid dis, enim egestas dignissim, non risus aliquet montes, elementum augue, mus purus, aenean dis.</p>
+
+<p>Cras adipiscing augue, cras amet nunc urna? Lectus montes! Montes et augue amet, scelerisque egestas, turpis, amet adipiscing urna natoque egestas. Augue elementum etiam, a dis! Et pid proin elit vel, integer cum, mid nisi dictumst pulvinar? Porttitor? Elit? Ut auctor ultricies, pulvinar amet elementum! Ac amet mus dolor.</p>
+
+<p>Ut. Cras dignissim! Nec ac porta nunc odio amet elementum ultricies, et augue! A, aliquet quis porttitor lorem? Scelerisque? Risus velit vel amet! Adipiscing magnis, mus augue, sed lundium proin tincidunt vel arcu nec lectus tristique diam ultrices proin, massa pulvinar facilisis, nunc, pulvinar urna magnis et quis ultrices.</p>
+</body>
+</html>
