@@ -31,12 +31,12 @@
 				var self = this;
 				
 				// get items
-				properties.tags = $(self).find(settings.repeaterTag.toLowerCase());
+				properties.tags = $(self).children(settings.repeaterTag.toLowerCase());
 				
 				// wait for images to load completely, before initializing
 				$(window).bind('load', function() {
 					
-					console.log('windowloaded');
+					//console.log('windowloaded');
 				
 					properties.maxSize = getMaximumSize(properties.tags);
 					
@@ -105,13 +105,13 @@
 	function getMaximumSize(elemsSet){
 		var maxWidth = 0;
 		var maxHeight = 0;
-		elemsSet.each(function(){
-			item = $(this);
-			maxHeight = Math.max( item.height(), maxHeight );
-			maxWidth = Math.max( item.width(), maxWidth );
+		elemsSet.each(function(index, elem){
+			var item = $(elem);
+			maxHeight = Math.max( item.outerHeight(), maxHeight );
+			maxWidth = Math.max( item.outerWidth(), maxWidth );
 			childItems = getMaximumSize(item.children());
-			maxHeight = Math.max( childItems.height, maxHeight );
-			maxWidth = Math.max( childItems.width, maxWidth );
+			maxHeight = Math.max( childItems.outerHeight, maxHeight );
+			maxWidth = Math.max( childItems.outerWidth, maxWidth );
 		});
 		return {width: maxWidth, height:maxHeight};
 	}
