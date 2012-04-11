@@ -105,8 +105,8 @@
 	function getMaximumSize(elemsSet){
 		var maxWidth = 0;
 		var maxHeight = 0;
-		elemsSet.each(function(){
-			item = $(this);
+		elemsSet.each(function(index,elem){
+			var item = $(elem);
 			maxHeight = Math.max( item.height(), maxHeight );
 			maxWidth = Math.max( item.width(), maxWidth );
 			childItems = getMaximumSize(item.children());
