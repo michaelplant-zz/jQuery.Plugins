@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Index</title>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/tags/infobox/1.1.9/src/infobox.js"></script>
+<script type="text/javascript" src="assets/js/jquery.mappit.js"></script>
+<script type="text/javascript">
+	$().ready(function() {
+		var options = { 
+			data : 
+				[{ 
+					"ADDRESS" : "629 Euclid Ave",
+					"NAME" : "Rosetta One",
+					"CITY" : "Cleveland",
+					"LAT" : 41,
+					"LNG" : -81,
+					"LOCATION_ID" : "1",
+					"OFFICE_PHONE" : "(123) 456-7890",
+					"STATE_ABBR" : "OH",
+					"ZIP_CODE" : "44114",
+				},
+				{ 
+					"ADDRESS" : "629 Euclid Ave",
+					"NAME" : "Rosetta Two",
+					"CITY" : "Cleveland",
+					"LAT" : 41.1,
+					"LNG" : -81.1,
+					"LOCATION_ID" : "2",
+					"OFFICE_PHONE" : "(123) 456-7890",
+					"STATE_ABBR" : "OH",
+					"ZIP_CODE" : "44114",
+				},
+				{ 
+					"ADDRESS" : "629 Euclid Ave",
+					"NAME" : "Rosetta Three",
+					"CITY" : "Cleveland",
+					"LAT" : 41.2,
+					"LNG" : -81.2,
+					"LOCATION_ID" : "3",
+					"OFFICE_PHONE" : "(123) 456-7890",
+					"STATE_ABBR" : "OH",
+					"ZIP_CODE" : "44114",
+				},
+				{ 
+					"ADDRESS" : "629 Euclid Ave",
+					"NAME" : "Rosetta Four",
+					"CITY" : "Cleveland",
+					"LAT" : 41.3,
+					"LNG" : -81.3,
+					"LOCATION_ID" : "4",
+					"OFFICE_PHONE" : "(123) 456-7890",
+					"STATE_ABBR" : "OH",
+					"ZIP_CODE" : "44114",
+				}]
+			  
+		}
+		$("#map_canvas").mappit(options);
+		
+	});
+</script>
+</head>
+
+<body>
+<form><input type="text"/><input type="button" value="Go"/></form>
+<div id="map_canvas" style="width:500px;height:500px;"></div>
+</body>
+</html>
