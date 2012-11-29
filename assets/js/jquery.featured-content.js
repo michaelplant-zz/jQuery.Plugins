@@ -100,9 +100,9 @@
     };
     // animates with a slide effect
     function slideLeft() {
-        properties.tags.css('z-index', -1);
-        properties.tags.eq(properties.activeIndex).css({ zIndex: 0 }).removeClass('active');
-        properties.tags.eq(properties.nextIndex).css({ display: 'block', left: properties.maxSize.width, zIndex: 1 }).animate({ left: 0 }, 750).addClass('active');
+        properties.tags.css({'z-index': -1, left: '100%'});
+        properties.tags.eq(properties.activeIndex).css({ zIndex: 0, left: 0 }).removeClass('active');
+        properties.tags.eq(properties.nextIndex).css({ display: 'block', zIndex: 1 }).delay(0).animate({ left: 0 }, 750).addClass('active');
         if (settings.showPaging) {
             properties.paging.eq(properties.activeIndex).removeClass('active');
             properties.paging.eq(properties.nextIndex).addClass('active');
