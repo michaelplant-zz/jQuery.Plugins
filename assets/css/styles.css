@@ -234,6 +234,7 @@ p {
   position: absolute;
   bottom: 15px;
   right: 10px;
+  z-index: 1001;
 }
 .featured-content-paging .page {
   float: left;
