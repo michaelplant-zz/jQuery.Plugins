@@ -131,7 +131,7 @@
     }
     // loops through the elements and creates the paging icons
     function generatePaging(container) {
-        var pageHTML = '<div class="featured-content-paging" style="width:' + properties.tags.length * 13 + 'px">';
+        var pageHTML = '<div class="featured-content-paging" style="width:' + properties.tags.length * 30 + 'px">';
         properties.tags.each(function (index, elem) {
             pageHTML += '<span class="page">&nbsp;</span>';
         });
