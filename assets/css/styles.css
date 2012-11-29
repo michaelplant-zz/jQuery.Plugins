@@ -229,6 +229,7 @@ p {
 }
 #featured-content {
   height: 340px;
+  overflow: hidden;
 }
 .featured-content-paging {
   position: absolute;
@@ -239,8 +240,6 @@ p {
 .featured-content-paging .page {
   float: left;
   display: inline;
-  width: 20px;
-  height: 20px;
   background: gray;
   margin-right: 10px;
 }
