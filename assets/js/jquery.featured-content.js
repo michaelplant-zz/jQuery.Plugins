@@ -15,6 +15,8 @@
         exclude: '.home-callout',
         animation: 'crossFade',
         showPaging: false,
+        pagingWidth: 20,
+        pagingHeight: 20,
         pagingPlacement: 'bottom-right',
         startIndex: 0,
         speed: 4500
@@ -131,9 +133,10 @@
     }
     // loops through the elements and creates the paging icons
     function generatePaging(container) {
-        var pageHTML = '<div class="featured-content-paging" style="width:' + properties.tags.length * 30 + 'px">';
+    	
+        var pageHTML = '<div class="featured-content-paging">';
         properties.tags.each(function (index, elem) {
-            pageHTML += '<span class="page">&nbsp;</span>';
+            pageHTML += '<span class="page" style="width:' + settings.pagingWidth + 'px; height:' + settings.pagingHeight + 'px">&nbsp;</span>';
         });
         pageHTML += '</div>';
         $(container)
