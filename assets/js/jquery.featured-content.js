@@ -93,8 +93,8 @@
 	// animates with a slide effect
 	function slideLeft() {
 		properties.tags.css('z-index',-1);
-		properties.tags.eq(properties.activeIndex).css({ zIndex: 0 }).removeClass('active');
-		properties.tags.eq(properties.nextIndex).css({ display: 'block', left: properties.maxSize.width, zIndex: 1 }).animate({left:0},750).addClass('active');
+		properties.tags.eq(properties.activeIndex).css({ zIndex: 0 }).removeClass('active').css({left:0});
+		properties.tags.eq(properties.nextIndex).css({ display: 'block', left: '100%', zIndex: 1 }).animate({left:0},750).addClass('active');
 	}
 	// animates with a crossfade
 	function crossFade() {
