@@ -132,23 +132,25 @@
     }
     // animates with a slide effect
     function slide(toIndex) {
+    	var autoPlay = false;
     	if ( toIndex == undefined ) {
+    		autoPlay = true;
     		toIndex = properties.nextIndex;
     	} else {
     		stopSlideShow();
     		startSlideShow();
     	}
-        if ( toIndex > properties.activeIndex || toIndex == 0 ) {
+        //if ( toIndex > properties.activeIndex || autoPlay ) {
         	// forward
 			properties.tags.css({'z-index': -1, left: '100%'});
 			properties.tags.eq(properties.activeIndex).css({ zIndex: 0, left: 0 }).removeClass('active');
 			properties.tags.eq(toIndex).css({ display: 'block', zIndex: 1 }).delay(0).animate({ left: 0 }, 750).addClass('active');
-        } else {
+        /*} else {
         	// backward
 			properties.tags.css({'z-index': -1, left: '-100%'});
 			properties.tags.eq(properties.activeIndex).css({ zIndex: 0, left: 0 }).removeClass('active');
 			properties.tags.eq(toIndex).css({ display: 'block', zIndex: 1 }).delay(0).animate({ left: 0 }, 750).addClass('active');
-        }
+        }*/
         if (settings.showPaging) {
             properties.paging.eq(properties.activeIndex).removeClass('active');
             properties.paging.eq(toIndex).addClass('active');
